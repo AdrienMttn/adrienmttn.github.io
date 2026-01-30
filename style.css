@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #1a1a1a 0%,
+    #2d2d2d 10%,
+    #4a4a4a 30%
+  );
+}
+
+svg {
+  max-width: 50vw;
+  max-height: 60vh;
+  aspect-ratio: 1/1;
+  #blobClip {
+    transform-origin: center;
+    transition: ease-out transform 0.4s;
+  }
+  &:hover {
+    #blobClip {
+      transform: scale(1.15) translate(0%, 0%);
+    }
+    .text-content {
+      fill: rgb(255, 221, 0);
+      mix-blend-mode: overlay;
+    }
+  }
+}
+.text-content {
+  font:
+    700 10px/1.2 system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    sans-serif;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  fill: rgb(255, 221, 0);
+  mix-blend-mode: normal;
+  transition: ease fill 0.5s;
+}
+image {
+  filter: sepia(50%) contrast(110%) brightness(0.85) saturate(120%);
+}
