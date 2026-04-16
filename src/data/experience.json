@@ -1,0 +1,24 @@
+{
+  "experiences": [
+    {
+        "company": "CGI",
+        "type": "Stage de 6 semaines",
+        "description": "Stagiaire Développement Client Lourd"
+    },
+    {
+        "company": "CGI",
+        "type": "Stage de 6 semaines",
+        "description": "Stagiaire Développement d'Applications Web"
+    },
+    {
+        "company": "T2C",
+        "type": "Stage de 6 semaines",
+        "description": "Stagiaire Développement d'Applications Métier"
+    },
+    {
+        "company": "CHU",
+        "type": "Stage de 6 semaines",
+        "description": "Stagiaire Automatisation & PowerShell"
+    }
+  ]
+}
