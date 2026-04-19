@@ -52,7 +52,7 @@ onMounted(() => {
         trigger: experience,
         start: "50% 50%",
         end: "bottom+=50 50%",
-        markers: true,
+        markers: false,
         onEnter: () => {
           gsap.to(experience, {
             scale:1.25,
