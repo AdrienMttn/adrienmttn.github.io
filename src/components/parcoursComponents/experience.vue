@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {ref, type Ref, onMounted} from "vue";
 import UneExperience from "./experienceComponent/experience.vue";
 import experienceData from "../../data/experience.json";
 
 const experiences = experienceData.experiences;
-const listExperience: Ref<HTMLDivElement | null> = ref(null);
-const container: Ref<HTMLDivElement | null> = ref(null);
 const title: Ref<HTMLHeadingElement | null> = ref(null);
 onMounted(() => {
 
