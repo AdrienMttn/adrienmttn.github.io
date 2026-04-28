@@ -46,7 +46,7 @@ onMounted(async ()=>{
 </script>
 
 <template>
-  <div class="project-card card h-[80vh] lg:card-side shadow-sm relative overflow-hidden">
+  <div class="project-card card h-[80vh] min-w-[80vw] lg:card-side shadow-sm relative overflow-hidden">
     <!-- 1. Image en arrière-plan -->
     <div
       class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out"
