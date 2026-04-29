@@ -15,6 +15,7 @@ const props = defineProps<{
   image: string;
   host: string;
   healthLink: string;
+  haveDetails: boolean;
 }>();
 
 
@@ -78,7 +79,7 @@ onMounted(async ()=>{
           <p>{{ isOnline ? 'En Ligne' : 'Hors Ligne' }}</p>
         </div>
         <div class="flex gap-4">
-            <button class="btn btn-sm btn-outline" @click="$emit('click:viewDetails')">Details</button>
+            <button v-if="props.haveDetails" class="btn btn-sm btn-outline" @click="$emit('click:viewDetails')">Details</button>
             <a :href="props.link" target="_blank" :class="!isOnline ?'btn-disabled': ''" class="btn btn-sm btn-outline">Voir le projet</a>
             <a :href="props.github" target="_blank" class="btn btn-sm btn-outline">GitHub</a>
           </div>

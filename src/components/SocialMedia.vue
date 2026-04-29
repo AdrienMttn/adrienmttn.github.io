@@ -23,6 +23,7 @@ onMounted(() => {
 
 <template>
   <div
+    id="socialMediaSection"
     class="z-10 h-screen w-30 fixed right-0 flex flex-col justify-center items-center"
   >
     <a

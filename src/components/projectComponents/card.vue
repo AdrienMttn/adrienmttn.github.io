@@ -5,11 +5,6 @@ import backCard from "./backCard.vue";
 
 const viewDetails = ref(false);
 
-function toggleDetails() {
-  viewDetails.value = !viewDetails.value;
-  console.log("Toggled view details:", viewDetails.value);
-}
-
 
 const props = defineProps<{
   name: string;
@@ -20,6 +15,13 @@ const props = defineProps<{
   image: string;
   host: string;
   healthLink: string;
+  details?: {
+    contexte: string;
+    objectifs: string;
+    pointsDeRealisation: string;
+    difficultees: string;
+    competences: { competence: string; sousCompetences: number }[];
+  } | null;
 }>();
 
 </script>
@@ -35,7 +37,8 @@ const props = defineProps<{
   :image="props.image"
   :host="props.host"
   :healthLink="props.healthLink"
+  :have-details="props.details ? true : false"
   @click:viewDetails="viewDetails = true"
   />
-  <back-card v-else @click:viewDetails="viewDetails = false"/>
+  <back-card v-else-if="props.details && viewDetails" @click:viewDetails="viewDetails = false" :details="props.details"/>
 </template>

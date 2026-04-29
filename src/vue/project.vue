@@ -65,7 +65,7 @@ onMounted(() => {
         <h1 ref="title" class="text-3xl md:text-5xl font-bold">&nbsp;</h1>
     </div>
     <div ref="projectList" class="pl-40 pr-40 flex gap-20 w-screen">
-      <card v-for="project in projects" :name="project.name" :description="project.description" :languages="project.languages" :link="project.link" :github="project.github" :image="project.image" :host="project.host" :healthLink="project.healthLink"/>
+      <card v-for="project in projects" :name="project.name" :description="project.description" :languages="project.languages" :link="project.link" :github="project.github" :image="project.image" :host="project.host" :healthLink="project.healthLink" :details="project?.details"/>
     </div>
   </div>
 </template>
