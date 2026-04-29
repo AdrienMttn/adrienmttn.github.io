@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin) 
 
 const marquee = ref<HTMLElement | null>(null);
 
+function scrollToSection(sectionId: string) {
+  gsap.to(window, { duration: 1, scrollTo: `#${sectionId}` });
+}
 onMounted(() => {
 
   if (!marquee.value) return;
@@ -26,19 +32,19 @@ onMounted(() => {
     <hr class="w-full h-1 bg-black rounded-2xl border-0" />
     <div class="flex justify-between items-center">
       <div class="flex flex-col justify-start items-start text-5xl">
-        <p class="cursor-pointer hover:text-secondary transition-all duration-200">GITHUB</p>
-        <p class="cursor-pointer hover:text-secondary transition-all duration-200">LINKEDIN</p>
-        <p class="cursor-pointer hover:text-secondary transition-all duration-200">EMAIL</p>
+        <a href="https://github.com/AdrienMttn" class="cursor-pointer hover:text-secondary transition-all duration-200">GITHUB</a>
+        <a href="https://www.linkedin.com/in/adrien-metton" class="cursor-pointer hover:text-secondary transition-all duration-200">LINKEDIN</a>
+        <a href="mailto:ametton.sio@gmail.com" class="cursor-pointer hover:text-secondary transition-all duration-200">EMAIL</a>
       </div>
       <div class="flex flex-col justify-end items-end text-5xl">
-        <p class="cursor-pointer hover:text-secondary transition-all duration-200">ABOUT</p>
-        <p class="cursor-pointer hover:text-secondary transition-all duration-200">PROJECTS</p>
-        <p class="cursor-pointer hover:text-secondary transition-all duration-200">CONTACT</p>
+        <p @click="scrollToSection('aboutSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">ABOUT</p>
+        <p @click="scrollToSection('projectSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">PROJECTS</p>
+        <p @click="scrollToSection('contactSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">CONTACT</p>
       </div>
     </div>
     </div>
     <div class="w-screen flex justify-center items-center">
-      <p class="cursor-pointer hover:text-secondary transition-all duration-200">retour en haut</p>
+      <p @click="scrollToSection('aboutSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">retour en haut</p>
     </div>
     <div ref="marquee" class="h-50 flex items-center shrink-0">
       <h1 class="min-w-full uppercase font-bold text-[clamp(3.5rem,10vw,8rem)] leading-none">contactez moi</h1>
@@ -46,7 +52,7 @@ onMounted(() => {
     </div>
     <div class="flex justify-between w-screen items-center px-5">
       <p class="text-sm">© 2026 - tous droits réservés</p>
-      <p class="text-sm">fait avec le ❤️</p>
+      <p class="text-sm">Fait avec le ❤️</p>
     </div>
   </footer>
 </template>

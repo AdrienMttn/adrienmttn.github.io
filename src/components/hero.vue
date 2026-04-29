@@ -68,7 +68,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="main" class="hero bg-base-200 min-h-screen">
+  <div id="aboutSection" ref="main" class="hero bg-base-200 min-h-screen">
     <div class="hero-content text-center">
       <div class="max-w-md">
         <div ref="img" class="hover-3d">

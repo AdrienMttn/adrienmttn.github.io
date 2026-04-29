@@ -16,7 +16,7 @@ onMounted(() => {
   if (title.value) {
     gsap.to(title.value, {
     opacity: 1,
-    text: "Mes Projets :",
+    text: "Mes Projets",
     ease: "none",
     scrollTrigger: {
       trigger: title.value,
@@ -60,7 +60,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="container" class="w-screen h-screen flex flex-col gap-10 bg-base-200 overflow-hidden">
+  <div id="projectSection" ref="container" class="w-screen h-screen flex flex-col gap-10 bg-base-200 overflow-hidden">
     <div class="flex pl-20">
         <h1 ref="title" class="text-3xl md:text-5xl font-bold">&nbsp;</h1>
     </div>

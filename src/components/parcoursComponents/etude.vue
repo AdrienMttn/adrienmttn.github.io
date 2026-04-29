@@ -34,7 +34,7 @@ onMounted(() => {
   });
   gsap.to(title.value, {
     opacity: 1,
-    text: "Mes études :", 
+    text: "Mes études", 
     ease: "none",
     scrollTrigger: {
       trigger: title.value,
