@@ -35,7 +35,7 @@ const props = defineProps<{
       <div>
         <h2 class="text-2xl font-bold uppercase">Competences</h2>
         <div class="flex flex-col gap-3 p-5">
-          <competence v-for="competence in props.details.competences" :competence="competence.competence" :sousCompetences="competence.sousCompetences"/>
+          <competence v-for="uneCompetence in props.details.competences" :competence="uneCompetence.competence" :sousCompetences="uneCompetence.sousCompetences"/>
         </div>
       </div>
     </div>
