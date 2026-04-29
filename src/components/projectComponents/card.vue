@@ -1,9 +1,15 @@
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
-import language from "./language.vue";
+import { ref } from "vue";
+import frontCard from "./frontCard.vue";
+import backCard from "./backCard.vue";
 
-const isHovered = ref(false);
-const isOnline = ref(false);
+const viewDetails = ref(false);
+
+function toggleDetails() {
+  viewDetails.value = !viewDetails.value;
+  console.log("Toggled view details:", viewDetails.value);
+}
+
 
 const props = defineProps<{
   name: string;
@@ -16,73 +22,20 @@ const props = defineProps<{
   healthLink: string;
 }>();
 
-
-
-async function netlifyCheck(url: string): Promise<boolean> {
-  const request = await fetch(url);
-  const data = await request.json()
-  if (data.published_deploy && data.published_deploy.state === "ready") {
-    return true
-  }
-  return false
-}
-
-async function checkOnlineStatus(url: string): Promise<boolean> {
-  const request = await fetch(url);
-  const data = await request.json();
-  if (data.status === 200) {
-    return true;
-  }
-  return false;
-}
-onMounted(async ()=>{
-  if (props.host === "Netlify") {
-    isOnline.value = await netlifyCheck(props.healthLink);
-  } else {
-    isOnline.value = await checkOnlineStatus(props.healthLink);
-  }
-})
-
 </script>
 
 <template>
-  <div class="project-card card h-[80vh] min-w-[80vw] lg:card-side shadow-sm relative overflow-hidden">
-    <!-- 1. Image en arrière-plan -->
-    <div
-      class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out"
-      :style="{ backgroundImage: `url(${props.image})` }"
-    ></div>
-
-    <!-- 2. Dégradé de fond -->
-    <div
-      class="absolute inset-0 transition-all duration-1000 ease-in-out bg-linear-to-r  from-40% from-white via-white/70 to-white/0 backdrop-blur-xl"
-      :class="isHovered ? 'opacity-0' : 'opacity-100'"
-    ></div>
-
-    <!-- 3. Contenu textuel -->
-    <div
-      class="flex w-full relative transition-opacity duration-300 ease-in-out"
-      :class="{ 'opacity-0': isHovered }"
-    >
-      <div class="p-10 w-[40%] h-full flex flex-col gap-10">
-        <h2 class="text-4xl font-bold uppercase">{{ props.name }}</h2>
-        <p class="text-justify">{{ props.description }}</p>
-        <div class="flex gap-2 overflow-x-auto">
-          <language v-for="lang in props.languages" :type="lang"/>
-        </div>
-        <div class="flex items-center gap-2">
-          <div class="inline-grid *:[grid-area:1/1]">
-            <div :class="isOnline ?'status-success' :  'status-error'" class="status animate-ping" ></div>
-            <div :class="isOnline ?'status-success' :  'status-error'" class="status"></div>
-          </div>
-          <p>{{ isOnline ? 'En Ligne' : 'Hors Ligne' }}</p>
-        </div>
-        <div class="flex gap-4">
-            <a :href="props.link" target="_blank" :class="!isOnline ?'btn-disabled': ''" class="btn btn-sm">Voir le projet</a>
-            <a :href="props.github" target="_blank" class="btn btn-sm btn-outline">GitHub</a>
-          </div>
-      </div>
-      <div class="w-[60%] h-full cursor-pointer" @mouseenter="isHovered = true" @mouseleave="isHovered = false"></div>  
-    </div>
-  </div>
+  <front-card 
+  v-if="!viewDetails"
+  :name="props.name"
+  :description="props.description"
+  :languages="props.languages"
+  :link="props.link"
+  :github="props.github"
+  :image="props.image"
+  :host="props.host"
+  :healthLink="props.healthLink"
+  @click:viewDetails="viewDetails = true"
+  />
+  <back-card v-else @click:viewDetails="viewDetails = false"/>
 </template>

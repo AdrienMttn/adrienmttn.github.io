@@ -4,7 +4,7 @@
       "name": "vibz",
       "description": "Vibz est une application web moderne qui vous permet de découvrir et d'écouter le Top 20 des musiques les plus populaires de la semaine sur YouTube.",
       "languages": ["HTML", "CSS", "JavaScript", "Typescript", "Vue.js", "SQL"],
-      "link": "https://vibz.netlify.app/",
+      "link": "https://vibz-music.netlify.app/",
       "github": "https://github.com/AdrienMttn/music_charts",
       "image": "https://i.ibb.co/5g7wMJQ2/Capture-d-e-cran-2026-04-17-a-21-29-45.png",
       "host": "Netlify",
