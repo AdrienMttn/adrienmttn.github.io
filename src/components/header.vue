@@ -39,13 +39,13 @@ onMounted(() => {
 <template>
   <div ref="header" class="navbar fixed top-0 z-10 flex justify-center">
     <ul class="flex space-x-4 text-xl">
-      <li ref="about" class="hover:text-secondary cursor-pointer">
+      <li ref="about" class="hover:text-secondary cursor-none">
         <a @click="scrollToSection('aboutSection')">About</a>
       </li>
-      <li ref="projects" class="hover:text-secondary cursor-pointer">
+      <li ref="projects" class="hover:text-secondary cursor-none ">
         <a @click="scrollToSection('projectSection')">Projects</a>
       </li>
-      <li ref="contact" class="hover:text-secondary cursor-pointer">
+      <li ref="contact" class="hover:text-secondary cursor-none">
         <a @click="scrollToSection('contactSection')">Contact</a>
       </li>
     </ul>

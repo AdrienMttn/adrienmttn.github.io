@@ -15,7 +15,7 @@ const props = defineProps<{
 <template>
   <div class="project-card card h-[80vh] min-w-[80vw] lg:card-side shadow-sm relative overflow-y-scroll bg-base-100"> 
     <div class="p-10 h-full flex flex-col gap-10">
-      <a @click="$emit('click:viewDetails')" class="cursor-pointer text-3xl hover:text-secondary transition-all duration-200 w-fit">&#8592; Retour</a>
+      <a @click="$emit('click:viewDetails')" class=" text-3xl hover:text-secondary transition-all duration-200 w-fit">&#8592; Retour</a>
       <div class="w-full">
         <h2 class="text-2xl font-bold uppercase">Contexte</h2>
         <p class="px-5 text-justify">{{ props.details.contexte }}</p>

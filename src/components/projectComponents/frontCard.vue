@@ -79,12 +79,12 @@ onMounted(async ()=>{
           <p>{{ isOnline ? 'En Ligne' : 'Hors Ligne' }}</p>
         </div>
         <div class="flex gap-4">
-            <button v-if="props.haveDetails" class="btn btn-sm btn-outline" @click="$emit('click:viewDetails')">Details</button>
-            <a :href="props.link" target="_blank" :class="!isOnline ?'btn-disabled': ''" class="btn btn-sm btn-outline">Voir le projet</a>
-            <a :href="props.github" target="_blank" class="btn btn-sm btn-outline">GitHub</a>
+            <button v-if="props.haveDetails" class="btn btn-sm btn-outline cursor-none" @click="$emit('click:viewDetails')">Details</button>
+            <a :href="props.link" target="_blank" :class="!isOnline ?'btn-disabled': ''" class="btn btn-sm btn-outline cursor-none">Voir le projet</a>
+            <a :href="props.github" target="_blank" class="btn btn-sm btn-outline cursor-none">GitHub</a>
           </div>
       </div>
-      <div class="w-[60%] h-full cursor-pointer" @mouseenter="isHovered = true" @mouseleave="isHovered = false"></div>  
+      <div class="w-[60%] h-full " @mouseenter="isHovered = true" @mouseleave="isHovered = false"></div>  
     </div>
   </div>
 </template>

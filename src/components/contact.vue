@@ -32,19 +32,19 @@ onMounted(() => {
     <hr class="w-full h-1 bg-black rounded-2xl border-0" />
     <div class="flex justify-between items-center">
       <div class="flex flex-col justify-start items-start text-5xl">
-        <a href="https://github.com/AdrienMttn" class="cursor-pointer hover:text-secondary transition-all duration-200">GITHUB</a>
-        <a href="https://www.linkedin.com/in/adrien-metton" class="cursor-pointer hover:text-secondary transition-all duration-200">LINKEDIN</a>
-        <a href="mailto:ametton.sio@gmail.com" class="cursor-pointer hover:text-secondary transition-all duration-200">EMAIL</a>
+        <a href="https://github.com/AdrienMttn" class=" hover:text-secondary transition-all duration-200 cursor-none">GITHUB</a>
+        <a href="https://www.linkedin.com/in/adrien-metton" class=" hover:text-secondary transition-all duration-200 cursor-none">LINKEDIN</a>
+        <a href="mailto:ametton.sio@gmail.com" class=" hover:text-secondary transition-all duration-200 cursor-none">EMAIL</a>
       </div>
       <div class="flex flex-col justify-end items-end text-5xl">
-        <p @click="scrollToSection('aboutSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">ABOUT</p>
-        <p @click="scrollToSection('projectSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">PROJECTS</p>
-        <p @click="scrollToSection('contactSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">CONTACT</p>
+        <p @click="scrollToSection('aboutSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">ABOUT</p>
+        <p @click="scrollToSection('projectSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">PROJECTS</p>
+        <p @click="scrollToSection('contactSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">CONTACT</p>
       </div>
     </div>
     </div>
     <div class="w-screen flex justify-center items-center">
-      <p @click="scrollToSection('aboutSection')" class="cursor-pointer hover:text-secondary transition-all duration-200">retour en haut</p>
+      <p @click="scrollToSection('aboutSection')" class=" hover:text-secondary transition-all duration-200">retour en haut</p>
     </div>
     <div ref="marquee" class="h-50 flex items-center shrink-0">
       <h1 class="min-w-full uppercase font-bold text-[clamp(3.5rem,10vw,8rem)] leading-none">contactez moi</h1>

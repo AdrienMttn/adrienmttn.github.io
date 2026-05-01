@@ -27,3 +27,27 @@
     local("PP Neue Machina Light"),
     url(./assets/fonts/subset-PPNeueMachina-Light.woff2) format("woff2");
 }
+
+html, body {
+  cursor: none;
+  background-color: var(--color-base-200);
+  overflow-x: hidden !important;
+  overflow-y: auto;
+}
+
+.flair {
+  z-index: 9999;
+  width: 20px;
+  height: 25px;
+  position: fixed;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.flair svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--color-secondary);
+}

@@ -30,7 +30,7 @@ onMounted(() => {
       ref="linkedin"
       href="https://www.linkedin.com/in/adrien-metton/"
       target="_blank"
-      class="mb-4 cursor-pointer backdrop-blur-md rounded-full p-2"
+      class="mb-4  backdrop-blur-md rounded-full p-2 cursor-none"
     >
       <svg
         width="34"
@@ -56,7 +56,7 @@ onMounted(() => {
       ref="github"
       href="https://github.com/adrienmttn"
       target="_blank"
-      class="mb-4 cursor-pointer backdrop-blur-md rounded-full p-2"
+      class="mb-4  backdrop-blur-md rounded-full p-2 cursor-none"
     >
       <svg
         fill="#000000"
