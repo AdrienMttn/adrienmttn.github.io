@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import cv from "./contactComponent/cv.vue";
 
 gsap.registerPlugin(ScrollToPlugin) 
 
@@ -37,8 +38,8 @@ onMounted(() => {
         <a href="mailto:ametton.sio@gmail.com" class=" hover:text-secondary transition-all duration-200 cursor-none">EMAIL</a>
       </div>
       <div class="flex flex-col justify-end items-end text-5xl">
-        <p @click="scrollToSection('aboutSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">ABOUT</p>
-        <p @click="scrollToSection('projectSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">PROJECTS</p>
+        <p @click="scrollToSection('aboutSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">À PROPOS</p>
+        <p @click="scrollToSection('projectSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">PROJETS</p>
         <p @click="scrollToSection('contactSection')" class=" hover:text-secondary transition-all duration-200 cursor-none">CONTACT</p>
       </div>
     </div>
@@ -50,6 +51,7 @@ onMounted(() => {
       <h1 class="min-w-full uppercase font-bold text-[clamp(3.5rem,10vw,8rem)] leading-none">contactez moi</h1>
       <h1 class="min-w-full uppercase font-bold text-[clamp(3.5rem,10vw,8rem)] leading-none" aria-hidden="true">contactez moi</h1>
     </div>
+    <cv />
     <div class="flex justify-between w-screen items-center px-5">
       <p class="text-sm">© 2026 - tous droits réservés</p>
       <p class="text-sm">Fait avec le ❤️</p>

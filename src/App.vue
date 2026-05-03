@@ -46,9 +46,21 @@ onMounted(() => {
     let xTo = gsap.quickTo(".flair", "x", {duration: 0.2}),
     yTo = gsap.quickTo(".flair", "y", {duration: 0.2});
     window.addEventListener("mousemove", e => {
-      xTo(e.clientX);
-      yTo(e.clientY);
+      xTo(e.clientX+10);
+      yTo(e.clientY+10);
     });
+
+
+  window.addEventListener("wheel", (e) => {
+  if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+    e.preventDefault()
+    window.scrollBy({
+      top: e.deltaX, // on transforme le scroll horizontal en vertical
+      behavior: "smooth"
+    })
+  }
+}, { passive: false })
+
 });
 </script>
 

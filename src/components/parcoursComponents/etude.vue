@@ -20,21 +20,21 @@ if (lastEtude) {
   });
 }
 const title: Ref<HTMLHeadingElement | null> = ref(null);
-const container: Ref<HTMLDivElement | null> = ref(null);
+// const container: Ref<HTMLDivElement | null> = ref(null);
 const parcourList: Ref<HTMLUListElement | null> = ref(null);
 
 onMounted(() => {
-  gsap.to(container.value, {
-    scrollTrigger: {
-      trigger: container.value,
-      start: "top top",
-      end: "bottom top",
-      pin: true
-    },
-  });
+  // gsap.to(container.value, {
+  //   scrollTrigger: {
+  //     trigger: container.value,
+  //     start: "top top",
+  //     end: "bottom top",
+  //     pin: true
+  //   },
+  // });
   gsap.to(title.value, {
     opacity: 1,
-    text: "Mes études", 
+    text: "Mon parcours", 
     ease: "none",
     scrollTrigger: {
       trigger: title.value,

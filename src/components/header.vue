@@ -40,10 +40,10 @@ onMounted(() => {
   <div ref="header" class="navbar fixed top-0 z-10 flex justify-center">
     <ul class="flex space-x-4 text-xl">
       <li ref="about" class="hover:text-secondary cursor-none">
-        <a @click="scrollToSection('aboutSection')">About</a>
+        <a @click="scrollToSection('aboutSection')">À Propos</a>
       </li>
       <li ref="projects" class="hover:text-secondary cursor-none ">
-        <a @click="scrollToSection('projectSection')">Projects</a>
+        <a @click="scrollToSection('projectSection')">Projets</a>
       </li>
       <li ref="contact" class="hover:text-secondary cursor-none">
         <a @click="scrollToSection('contactSection')">Contact</a>
