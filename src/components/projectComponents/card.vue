@@ -15,15 +15,8 @@ const props = defineProps<{
   image: string;
   host: string;
   healthLink: string;
-  details?: {
-    contexte: string;
-    objectifs: string;
-    pointsDeRealisation: string;
-    difficultees: string;
-    competences: { competence: string; sousCompetences: number }[];
-  } | null;
+  details: string | null;
 }>();
-
 </script>
 
 <template>
@@ -37,8 +30,7 @@ const props = defineProps<{
   :image="props.image"
   :host="props.host"
   :healthLink="props.healthLink"
-  :have-details="props.details ? true : false"
-  @click:viewDetails="viewDetails = true"
+  :details="props.details"
   />
-  <back-card v-else-if="props.details && viewDetails" @click:viewDetails="viewDetails = false" :details="props.details"/>
+  <!-- <back-card v-else-if="props.details && viewDetails" @click:viewDetails="viewDetails = false" :details="props.details"/> -->
 </template>
