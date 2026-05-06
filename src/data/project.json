@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "name": "vibz",
+      "description": "Vibz est une application web moderne qui vous permet de découvrir et d'écouter le Top 20 des musiques les plus populaires de la semaine sur YouTube.",
+      "languages": ["HTML", "CSS", "JavaScript", "Typescript", "Vue.js", "SQL"],
+      "link": "https://vibz-music.netlify.app/",
+      "github": "https://github.com/AdrienMttn/music_charts",
+      "image": "https://i.ibb.co/5g7wMJQ2/Capture-d-e-cran-2026-04-17-a-21-29-45.png",
+      "host": "Netlify",
+      "healthLink": "https://api.netlify.com/api/v1/sites/6668b000-cd5b-4d63-b2d2-bcd53e05f28e",
+      "details" : "https://adrienmttn.github.io/vibz/"
+    },
+    {
+      "name": "TgCloud",
+      "description": "API de stockage d'images gratuit, utilisant telegram comme hébergeur d'images.",
+      "languages": ["GO"],
+      "link": "https://tgcloud.alwaysdata.net",
+      "github": "https://github.com/AdrienMttn/TgCloud",
+      "image": "https://i.ibb.co/LygytWF/Capture-d-e-cran-2026-04-17-a-21-33-11.png",
+      "host": "AlwaysData",
+      "healthLink": "https://tgcloud.alwaysdata.net/health/",
+      "details" : null
+    }
+  ]
+}
