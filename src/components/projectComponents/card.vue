@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import frontCard from "./frontCard.vue";
-import backCard from "./backCard.vue";
+// import backCard from "./backCard.vue";
 
 const viewDetails = ref(false);
 
