@@ -10,6 +10,7 @@ lerna-debug.log*
 
 src
 src/*
+src/**
 public
 README.md
 package-lock.json

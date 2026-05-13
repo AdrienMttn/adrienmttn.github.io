@@ -2,6 +2,7 @@
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
+	background-color: oklch(97% 0 0);
 }
 * {
 	box-sizing: border-box;
