@@ -9,11 +9,11 @@ const props = defineProps<{
   name: string;
   description: string;
   languages: string[];
-  link: string;
+  link: string | null;
   github: string | null;
   image: string;
-  host: string;
-  healthLink: string;
+  host: string | null;
+  healthLink: string | null;
   details: string | null;
 }>();
 </script>

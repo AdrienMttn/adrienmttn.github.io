@@ -10,11 +10,11 @@ const props = defineProps<{
   name: string;
   description: string;
   languages: string[];
-  link: string;
-  github?: string | null;
+  link: string | null;
+  github: string | null;
   image: string;
-  host: string;
-  healthLink: string;
+  host: string | null;
+  healthLink: string | null;
   details?: string | null;
 }>();
 
@@ -38,6 +38,10 @@ async function checkOnlineStatus(url: string): Promise<boolean> {
   return false;
 }
 onMounted(async ()=>{
+  if (!props.healthLink) {
+    isOnline.value = false;
+    return;
+  }
   if (props.host === "Netlify") {
     isOnline.value = await netlifyCheck(props.healthLink);
   } else {
@@ -80,7 +84,7 @@ onMounted(async ()=>{
         </div>
         <div class="flex gap-4">
             <a :href="props.details" v-if="props.details" class="btn btn-sm btn-outline cursor-none">Details</a>
-            <a :href="props.link" target="_blank" :class="!isOnline ?'btn-disabled': ''" class="btn btn-sm btn-outline cursor-none">Voir le projet</a>
+            <a :href="props.link ? props.link : ''" target="_blank" :class="!isOnline ?'btn-disabled': ''" class="btn btn-sm btn-outline cursor-none">Voir le projet</a>
             <a :href="props.github ? props.github : ''" :class="props.github ? '':'btn-disabled'" target="_blank" class="btn btn-sm btn-outline cursor-none">GitHub</a>
           </div>
       </div>
