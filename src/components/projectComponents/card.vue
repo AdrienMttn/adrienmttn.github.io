@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import frontCard from "./frontCard.vue";
-// import backCard from "./backCard.vue";
 
 const viewDetails = ref(false);
 
@@ -11,7 +10,7 @@ const props = defineProps<{
   description: string;
   languages: string[];
   link: string;
-  github: string;
+  github: string | null;
   image: string;
   host: string;
   healthLink: string;
@@ -32,5 +31,4 @@ const props = defineProps<{
   :healthLink="props.healthLink"
   :details="props.details"
   />
-  <!-- <back-card v-else-if="props.details && viewDetails" @click:viewDetails="viewDetails = false" :details="props.details"/> -->
 </template>

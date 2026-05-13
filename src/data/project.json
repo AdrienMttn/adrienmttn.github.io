@@ -21,6 +21,50 @@
       "host": "AlwaysData",
       "healthLink": "https://tgcloud.alwaysdata.net/health/",
       "details" : null
+    },
+    {
+      "name": "INSTAI",
+      "description": "Réseau social moderne dédiée aux images générées par intelligence artificielle. Inspirée par Instagram.",
+      "languages": ["HTML", "CSS", "JavaScript", "Typescript", "Vue.js", "SQL"],
+      "link": "https://instai.alwaysdata.net/",
+      "github": "https://github.com/AdrienMttn/instai",
+      "image": "https://i.ibb.co/CpTXj26z/Capture-d-e-cran-2026-05-13-a-12-34-13.png",
+      "host": "AlwaysData",
+      "healthLink": "https://instai.alwaysdata.net/api/health/",
+      "details" : "https://adrienmttn.github.io/instai/"
+    },
+    {
+      "name": "GUEST",
+      "description": "Application de gestion d'invités développée pour CGI Clermont-Ferrand",
+      "languages": ["HTML", "CSS", "PHP", "SQL"],
+      "link": null,
+      "github": null,
+      "image": "https://i.ibb.co/hRpwYpfZ/CGI.png",
+      "host": null,
+      "healthLink": null,
+      "details" : "https://adrienmttn.github.io/guest/"
+    },
+    {
+      "name": "CSS ZEN GARDEN",
+      "description": "CSS Zen Garden est un projet qui met en avant la puissance du CSS en permettant aux développeurs de créer des designs uniques pour une même structure HTML.",
+      "languages": ["HTML", "CSS"],
+      "link": "https://adrienmttn.github.io/cssZenGarden/",
+      "github": "https://github.com/AdrienMttn/csszengarden",
+      "image": "https://i.ibb.co/99fv9n4M/Capture-d-e-cran-2026-05-13-a-17-58-08.png",
+      "host": "AlwaysData",
+      "healthLink": "https://tgcloud.alwaysdata.net/health/",
+      "details" : null
+    },
+    {
+      "name":"WACKY TREATS",
+      "description": "Conception et réalisation complète d'un site vitrine pour un produit magiques.",
+      "languages": ["HTML", "CSS"],
+      "link": "https://adrienmttn.github.io/wacky_treats/",
+      "github": "https://github.com/AdrienMttn/wacky_treats",
+      "image": "https://i.ibb.co/1GW7vYHt/Capture-d-e-cran-2026-05-13-a-18-04-08.png",
+      "host": "AlwaysData",
+      "healthLink": "https://tgcloud.alwaysdata.net/health/",
+      "details" : null
     }
   ]
 }

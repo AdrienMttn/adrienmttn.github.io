@@ -11,7 +11,7 @@ const props = defineProps<{
   description: string;
   languages: string[];
   link: string;
-  github: string;
+  github?: string | null;
   image: string;
   host: string;
   healthLink: string;
@@ -81,7 +81,7 @@ onMounted(async ()=>{
         <div class="flex gap-4">
             <a :href="props.details" v-if="props.details" class="btn btn-sm btn-outline cursor-none">Details</a>
             <a :href="props.link" target="_blank" :class="!isOnline ?'btn-disabled': ''" class="btn btn-sm btn-outline cursor-none">Voir le projet</a>
-            <a :href="props.github" target="_blank" class="btn btn-sm btn-outline cursor-none">GitHub</a>
+            <a :href="props.github ? props.github : ''" :class="props.github ? '':'btn-disabled'" target="_blank" class="btn btn-sm btn-outline cursor-none">GitHub</a>
           </div>
       </div>
       <div class="w-[60%] h-full " @mouseenter="isHovered = true" @mouseleave="isHovered = false"></div>  
